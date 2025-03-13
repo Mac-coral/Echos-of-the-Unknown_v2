@@ -7,14 +7,14 @@ public class CameraController : MonoBehaviour
     [SerializeField] float minVerticalAngle = -45f, maxVerticalAngle = 45f;
     //[SerializeField] float minHorizontalAngle = -45f, maxHorizontalAngle = 45f;
     [SerializeField] Vector2 framingOffset;
-    [SerializeField] float rotationSpeed = 2f;
+    [SerializeField] float rotationSpeed = 1.5f;
     [SerializeField] bool invertX, invertY;
 
     float rotationX, rotationY, invertXVal, invertYVal;
     private void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
     private void Update()
     {
