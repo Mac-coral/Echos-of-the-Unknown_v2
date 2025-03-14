@@ -46,10 +46,15 @@ public class PlayerController : MonoBehaviour
             velocityY = -2f;
         }
         */
+
+
+        // Disable jumping due to blind person difficulty jumping
+        /*
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocityY = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+        */
 
         // Apply gravity
         velocityY += gravity * Time.deltaTime;
