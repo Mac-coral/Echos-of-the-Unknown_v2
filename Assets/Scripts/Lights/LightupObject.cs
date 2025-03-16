@@ -60,9 +60,7 @@ public class LightupObject : MonoBehaviour
     {
         if (collision.transform.tag.Equals("Player"))
         {
-            SetToBright();
-            timerActive = false;
-            timerRemaining = timerLightRemainOn;
+            EnterCollision();
         }
     }
 
@@ -71,8 +69,20 @@ public class LightupObject : MonoBehaviour
 
         if (collision.transform.tag.Equals("Player"))
         {
-            timerActive = true;
+            ExitCollision();
         }
+    }
+
+    public void ExitCollision()
+    {
+        timerActive = true;
+    }
+
+    public void EnterCollision()
+    {
+        SetToBright();
+        timerActive = false;
+        timerRemaining = timerLightRemainOn;
     }
 
     // Relies on recusion to obtain the proper materials for default material
